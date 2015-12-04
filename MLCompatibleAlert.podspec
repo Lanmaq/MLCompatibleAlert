@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "MLCompatibleAlert"
   s.version      = "0.0.1"
-  s.summary      = "MLCompatibleAlert is a compatible alert,use UIAlertController in iOS 8 and later,use UIAlertView and UIActionSheet in iOS 7,and support for dynamic create alert's otherTitle button"
+  s.summary      = "MLCompatibleAlert is a compatible alert and support for dynamic create alert's otherTitle button."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-Apple in iOS8 introduced a brand-new UIAlertController, old UIAlertView and UIActionSheet gradually abandoned, but if you still support iOS7 system, you will have to write two sets of code. The MLCompatibleAlert solve this problem!
+Apple in iOS8 introduced a brand-new UIAlertController, old UIAlertView and UIActionSheet gradually abandoned, but if you still support iOS7 system, you will have to write two sets of code. The MLCompatibleAlert solve this problem and support for dynamic create alert's otherTitle button,easy to use!
                    DESC
 
   s.homepage     = "https://github.com/Lanmaq/MLCompatibleAlert"
@@ -80,7 +80,7 @@ Apple in iOS8 introduced a brand-new UIAlertController, old UIAlertView and UIAc
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://github.com/Lanmaq/MLCompatibleAlert.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/Lanmaq/MLCompatibleAlert.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
