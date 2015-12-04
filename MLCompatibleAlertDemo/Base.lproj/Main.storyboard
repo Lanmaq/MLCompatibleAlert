@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iG-hB-vpb">
+                                <rect key="frame" x="0.0" y="449" width="600" height="39"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.75686274509999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="O0q-gT-jHi"/>
+                                </constraints>
+                                <state key="normal" title="AlertStyleAlert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertStyleAlertButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xhQ-dZ-x8e"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="use" translatesAutoresizingMaskIntoConstraints="NO" id="68T-61-GQ2">
+                                <rect key="frame" x="0.0" y="28" width="600" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="68T-61-GQ2" secondAttribute="height" multiplier="120:67" id="M3K-qY-vb4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVn-DM-srP">
+                                <rect key="frame" x="0.0" y="395" width="600" height="39"/>
+                                <color key="backgroundColor" red="0.023529411760000001" green="0.75686274509999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ssc-yr-E6C"/>
+                                </constraints>
+                                <state key="normal" title="AlertStyleActionSheet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertStyleActionSheetButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKm-AO-hDs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xms-Nl-Jno">
+                                <rect key="frame" x="0.0" y="512" width="600" height="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.023529411760000001" green="0.75686274509999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yYw-xL-iqH">
+                                <rect key="frame" x="546" y="20" width="34" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Click">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iYK-Co-V05" kind="presentation" id="pE2-Dx-wCq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yYw-xL-iqH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0he-Kj-CMo"/>
+                            <constraint firstItem="JVn-DM-srP" firstAttribute="top" secondItem="68T-61-GQ2" secondAttribute="bottom" constant="32" id="5te-g9-y3z"/>
+                            <constraint firstItem="1iG-hB-vpb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="8rK-bj-xzY"/>
+                            <constraint firstItem="68T-61-GQ2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="AkD-3O-8vD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JVn-DM-srP" secondAttribute="trailing" constant="-20" id="FBp-l0-OS2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xms-Nl-Jno" secondAttribute="trailing" constant="-20" id="HwE-xy-iRm"/>
+                            <constraint firstItem="1iG-hB-vpb" firstAttribute="top" secondItem="JVn-DM-srP" secondAttribute="bottom" constant="15" id="Qdb-Mv-0QO"/>
+                            <constraint firstItem="68T-61-GQ2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="V1r-Ky-y8N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="68T-61-GQ2" secondAttribute="trailing" constant="-20" id="VZd-2u-cOd"/>
+                            <constraint firstItem="yYw-xL-iqH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Wnf-7z-yHL"/>
+                            <constraint firstItem="JVn-DM-srP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="a1g-0d-rNK"/>
+                            <constraint firstItem="xms-Nl-Jno" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="lrz-jK-nZr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xms-Nl-Jno" secondAttribute="bottom" constant="27" id="n5H-KE-nZc"/>
+                            <constraint firstItem="xms-Nl-Jno" firstAttribute="top" secondItem="1iG-hB-vpb" secondAttribute="bottom" constant="24" id="tSJ-lZ-mVI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1iG-hB-vpb" secondAttribute="trailing" constant="-20" id="wYi-Gz-GFJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="xms-Nl-Jno" id="d1Q-HZ-MAR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="309"/>
+        </scene>
+        <!--Bug Display Controller-->
+        <scene sceneID="l8e-mA-KZ7">
+            <objects>
+                <viewController id="iYK-Co-V05" customClass="BugDisplayController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Run-Dl-3KX"/>
+                        <viewControllerLayoutGuide type="bottom" id="WIf-sN-oI3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fwi-HH-SAn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test UIActionSheet in iOS 9.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lco-iC-qfc">
+                                <rect key="frame" x="176" y="43" width="249" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oZF-4e-hym"/>
+                                    <constraint firstAttribute="width" constant="249" id="t4t-xQ-FlO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.023529411760000001" green="0.75686274509999996" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amr-Yp-ive">
+                                <rect key="frame" x="205" y="152" width="163" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0n-3W-rIc">
+                                <rect key="frame" x="142" y="162" width="317" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="317" id="Rgy-Lg-3Hx"/>
+                                    <constraint firstAttribute="height" constant="30" id="VpA-Im-KJ6"/>
+                                </constraints>
+                                <state key="normal" title="Step 2: Click me show the UIActionSheet!!">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stepTwo:" destination="iYK-Co-V05" eventType="touchUpInside" id="5oM-n6-JXF"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Step 1: Eidt textField show the keyboard!!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xaz-1I-vJu">
+                                <rect key="frame" x="154" y="117" width="293" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AAI-rE-99h"/>
+                                    <constraint firstAttribute="width" constant="293" id="aA8-kI-o0h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sheet below the keyboard but in iOS 7 is well,and some others like this i don't know " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ln-v6-MuG">
+                                <rect key="frame" x="111" y="182" width="379" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="379" id="DJY-XM-dOB"/>
+                                    <constraint firstAttribute="height" constant="75" id="EFI-Zk-H6P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple is change for something about it so you don't use UIActionSheet higher iOS 8.3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWL-Mv-1MR">
+                                <rect key="frame" x="100" y="265" width="400" height="91"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="3uT-I6-brQ"/>
+                                    <constraint firstAttribute="width" constant="400" id="iil-F7-xaM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKw-5W-kbf">
+                                <rect key="frame" x="497" y="28" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="5pU-cG-3Dn"/>
+                                    <constraint firstAttribute="height" constant="30" id="qkp-qY-1dL"/>
+                                </constraints>
+                                <state key="normal" title="dismiss"/>
+                                <connections>
+                                    <action selector="dismiss:" destination="iYK-Co-V05" eventType="touchUpInside" id="aEN-dp-Rw6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nK7-36-StV">
+                                <rect key="frame" x="111" y="81" width="379" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="379" id="5Hw-gO-8MD"/>
+                                    <constraint firstAttribute="height" constant="30" id="LZ6-Go-vo1"/>
+                                </constraints>
+                                <state key="normal" title="Reset use compatibleAlert also UIAlertController"/>
+                                <connections>
+                                    <action selector="compatibleAlert:" destination="iYK-Co-V05" eventType="touchUpInside" id="aP3-IC-784"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oKw-5W-kbf" firstAttribute="top" secondItem="Run-Dl-3KX" secondAttribute="bottom" constant="8" id="4dm-HK-tPP"/>
+                            <constraint firstItem="2Ln-v6-MuG" firstAttribute="top" secondItem="F0n-3W-rIc" secondAttribute="bottom" constant="-10" id="6sC-a7-ivT"/>
+                            <constraint firstItem="nK7-36-StV" firstAttribute="centerX" secondItem="fwi-HH-SAn" secondAttribute="centerX" id="9bw-OU-bj2"/>
+                            <constraint firstItem="xaz-1I-vJu" firstAttribute="centerX" secondItem="fwi-HH-SAn" secondAttribute="centerX" id="G9m-Zv-8Oy"/>
+                            <constraint firstItem="2Ln-v6-MuG" firstAttribute="centerX" secondItem="fwi-HH-SAn" secondAttribute="centerX" id="JoX-IB-JSs"/>
+                            <constraint firstItem="xaz-1I-vJu" firstAttribute="top" secondItem="Lco-iC-qfc" secondAttribute="bottom" constant="44" id="Lvl-vA-8Tg"/>
+                            <constraint firstItem="eWL-Mv-1MR" firstAttribute="top" secondItem="2Ln-v6-MuG" secondAttribute="bottom" constant="8" id="QXx-7y-IaQ"/>
+                            <constraint firstItem="F0n-3W-rIc" firstAttribute="centerX" secondItem="fwi-HH-SAn" secondAttribute="centerX" id="Zf1-0l-a4y"/>
+                            <constraint firstItem="oKw-5W-kbf" firstAttribute="trailing" secondItem="fwi-HH-SAn" secondAttribute="trailingMargin" id="bVw-yc-YQg"/>
+                            <constraint firstItem="eWL-Mv-1MR" firstAttribute="centerX" secondItem="fwi-HH-SAn" secondAttribute="centerX" id="fg1-TM-Zut"/>
+                            <constraint firstItem="nK7-36-StV" firstAttribute="top" secondItem="Lco-iC-qfc" secondAttribute="bottom" constant="8" id="low-Uk-fdi"/>
+                            <constraint firstItem="Lco-iC-qfc" firstAttribute="top" secondItem="Run-Dl-3KX" secondAttribute="bottom" constant="23" id="n0Z-uO-yBy"/>
+                            <constraint firstItem="F0n-3W-rIc" firstAttribute="top" secondItem="xaz-1I-vJu" secondAttribute="bottom" constant="15" id="oy3-eV-CoX"/>
+                            <constraint firstItem="Lco-iC-qfc" firstAttribute="centerX" secondItem="fwi-HH-SAn" secondAttribute="centerX" id="pgq-fc-jlU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="xaz-1I-vJu" id="WbM-UX-9Re"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNT-IB-0fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869" y="309"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="use" width="760" height="375"/>
+    </resources>
+</document>
