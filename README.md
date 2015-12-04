@@ -2,13 +2,15 @@
 
 ##introduction
 
- See UIActionView Referce
+ See UIActionSheet/UIAlertView/UIAlertController Class Reference
 
+```objective-c
 UIActionSheet    NS_CLASS_DEPRECATED_IOS(2_0, 8_3, "UIActionSheet is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleActionSheet instead") __TVOS_PROHIBITED
 
  UIAlerView         NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "UIAlertView is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") __TVOS_PROHIBITED
 
  UIAlertController NS_CLASS_AVAILABLE_IOS(8_0)
+```
 
  Apple in iOS8 introduced a brand-new UIAlertController, the old UIAlertView and UIActionSheet gradually abandoned, but if you still support iOS7 system, you will have to write two sets of code. The 'MLCompatibleAlert' solve this problem and support for dynamic create alert's otherTitle button,easy to use!
 
@@ -24,7 +26,7 @@ I create MLCompatibleAlert:
 
  - Suppot create any type alert button dynamic and click return index all the same of system UIActionSheet、UIAlertView、UIAlertController.
 
-![sample](https://raw.githubusercontent.com/Lanmaq/MLCompatibleAlert/master/Alert.git)
+![sample](https://raw.githubusercontent.com/Lanmaq/MLCompatibleAlert/master/Alert.gif)
 
 For first-hand experience, just open the project and run it.
 
@@ -34,16 +36,18 @@ For first-hand experience, just open the project and run it.
 platform :ios, '6.0'
 pod "MLCompatibleAlert", "~> 0.0.1"
 ```
+
 if it's unable to find
+
 ‘pod setup'
+
 'pod search MLCompatibleAlert'
 
 ## Requirements
 
 - iOS 6.0+
 - ARC
-
-Note: ARC can be turned on and off on a per file basis.
+- Note: ARC can be turned on and off on a per file basis.
 
 ##Usage
 
@@ -60,11 +64,12 @@ MLCompatibleAlert *alert = [[MLCompatibleAlert alloc]
                                         cancelButtonTitle:@"Cancel"
                                  destructiveButtonTitle:@"Delete"
                                          otherButtonTitles:@"Send message",@"Send photo",nil];
+
 [alert showAlertWithParent:self];
 
 ```
 
-The Protocol like System UI
+The protocol like system UI
 
 ```objective-c
 - (void) compatibleAlert:(MLCompatibleAlert *)alert clickedButtonAtIndex:(NSInteger)buttonIndex{
@@ -72,6 +77,24 @@ The Protocol like System UI
 }
 
 ```
+
+To do well ,i don't write wll for using alert with textField 
+
+```objective-c
+
+//  if you use textField iOS 7
+alert.alertViewStyle = MLAlertViewStyleLoginAndPasswordInput;
+//    Add a text field only if the preferredStyle property is set to MLAlertControllerStyleAlert.
+// iOS 8 or higher
+[alert addTextFieldsWithConfigurationHandler:^(UITextField *textField) {
+textField.placeholder = @"Login in";
+}];
+[alert addTextFieldsWithConfigurationHandler:^(UITextField *textField) {
+textField.placeholder = @"Password";
+}];
+
+```
+
 ## License (MIT License)
 Copyright (c) 2015 Lanmaq
 
