@@ -7,12 +7,12 @@
 ```objective-c
 UIActionSheet    NS_CLASS_DEPRECATED_IOS(2_0, 8_3, "UIActionSheet is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleActionSheet instead") __TVOS_PROHIBITED
 
- UIAlerView         NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "UIAlertView is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") __TVOS_PROHIBITED
+UIAlerView         NS_CLASS_DEPRECATED_IOS(2_0, 9_0, "UIAlertView is deprecated. Use UIAlertController with a preferredStyle of UIAlertControllerStyleAlert instead") __TVOS_PROHIBITED
 
- UIAlertController NS_CLASS_AVAILABLE_IOS(8_0)
+UIAlertController NS_CLASS_AVAILABLE_IOS(8_0)
 ```
 
- Apple in iOS8 introduced a brand-new UIAlertController, the old UIAlertView and UIActionSheet gradually abandoned, but if you still support iOS7 system, you will have to write two sets of code. The 'MLCompatibleAlert' solve this problem and support for dynamic create alert's otherTitle button,easy to use!
+ Apple in iOS 8.0 introduced a brand-new UIAlertController, the old UIAlertView and UIActionSheet gradually abandoned, but if you still support iOS 7 system, you will have to write two sets of code. The 'MLCompatibleAlert' solve this problem and support for dynamic create alert's otherTitle button,easy to use!
 
 ##Features
 
@@ -82,15 +82,15 @@ To do well ,i don't write wll for using alert with textField
 
 ```objective-c
 
-//  if you use textField iOS 7
+// if you use textField iOS 7
 alert.alertViewStyle = MLAlertViewStyleLoginAndPasswordInput;
-//    Add a text field only if the preferredStyle property is set to MLAlertControllerStyleAlert.
+// Add a text field only if the preferredStyle property is set to MLAlertControllerStyleAlert.
 // iOS 8 or higher
 [alert addTextFieldsWithConfigurationHandler:^(UITextField *textField) {
-textField.placeholder = @"Login in";
+    textField.placeholder = @"Login in";
 }];
 [alert addTextFieldsWithConfigurationHandler:^(UITextField *textField) {
-textField.placeholder = @"Password";
+    textField.placeholder = @"Password";
 }];
 
 ```
