@@ -27,7 +27,6 @@ I create MLCompatibleAlert:
  - Suppot create any type alert button dynamic and click return index all the same of system UIActionSheet、UIAlertView、UIAlertController.
 
 ![sample](https://raw.githubusercontent.com/Lanmaq/MLCompatibleAlert/master/Alert.gif)
-
 ![sample](https://raw.githubusercontent.com/Lanmaq/MLCompatibleAlert/master/BadUI.gif)
 
 For first-hand experience, just open the project and run it.
